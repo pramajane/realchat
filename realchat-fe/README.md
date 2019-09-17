@@ -2,7 +2,23 @@
 
 > Realtime Chatting App
 
-## Build Setup
+## Build Setup Django
+
+``` bash
+# install dependencies
+pip install django
+
+# install dependencies
+pip install djangorestframework
+
+# migrate
+python manage.py migrate
+
+
+
+```
+
+## Build Setup Vue
 
 ``` bash
 # install dependencies
@@ -26,5 +42,6 @@ npm run e2e
 # run all tests
 npm test
 ```
+
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

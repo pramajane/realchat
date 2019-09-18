@@ -3,11 +3,12 @@ import os
 
 from celery import Celery
 
+from django.conf import settings
 
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'realchat.settings')
 
 app = Celery('realchat')
-app.config_from_object('django.conf:settings', namespace='CELERY')
+app.config_from_object('django.conf:settings')
 
-app.autodiscover_tasks()
+app.autodiscover_tasks(settings.INSTALLED_APPS)

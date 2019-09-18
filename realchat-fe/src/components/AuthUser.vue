@@ -121,7 +121,7 @@ export default {
   },
   methods: {
     signUp() {
-      $.post("http://localhost:8000/auth/users/create/", this.$data, data => {
+      $.post("http://localhost:8000/auth/users/", this.$data, data => {
         alert(
           "Your account has been created. You will be signed in automatically"
         );
@@ -132,7 +132,7 @@ export default {
     },
     signIn() {
       const credentials = { username: this.username, password: this.password };
-      $.post("http://localhost:8000/auth/token/login/", credentials, data => {
+      $.post("http://localhost:8000/auth/token/create/", credentials, data => {
         sessionStorage.setItem("authToken", data.token);
         sessionStorage.setItem("username", this.username);
         this.$router.push("/chats");

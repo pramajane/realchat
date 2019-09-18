@@ -1,5 +1,3 @@
-# realchat-fe
-
 > Realtime Chatting App
 
 ## Build Setup Django
@@ -11,7 +9,6 @@ pip install -r requirements.txt
 
 # migrate
 python manage.py migrate
-
 
 
 ```
@@ -42,4 +39,6 @@ npm test
 ```
 
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Realtime service was served by RabbitMQ and uWSGI websocket.
+Connection between django and websocket can only be done if RabbitMQ server is running.
+Make sure to run RabbitMQ before run websocket. 

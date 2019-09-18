@@ -44,4 +44,4 @@ Realtime service was served by RabbitMQ and uWSGI websocket.
 Connection between django and websocket can only be done if RabbitMQ server is running.
 Make sure to run RabbitMQ before run websocket. 
 
-The urls can only be accessed by django admin user. You can create via terminal using curl, eg: -X POST http://127.0.0.1:8000/auth/token/create/ --data 'username=user1&password=passofuser1'.
+The urls can only be accessed by django admin user. You can create via terminal using curl, eg: -X POST http://127.0.0.1:8000/auth/user/ --data 'username=user1&password=passofuser1' then get token to be used as header while calling api/chats/ urls, using: The urls can only be accessed by django admin user. You can create via terminal using curl, eg: -X POST http://127.0.0.1:8000/auth/token/create/ --data 'username=user1&password=passofuser1'.

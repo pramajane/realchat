@@ -5,11 +5,9 @@
 ## Build Setup Django
 
 ``` bash
-# install dependencies
-pip install django
 
 # install dependencies
-pip install djangorestframework
+pip install -r requirements.txt
 
 # migrate
 python manage.py migrate
